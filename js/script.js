@@ -29,6 +29,28 @@ dateCompleteMoment.add(1, "day");
 }
 
 
+// chimata ajax
+$.ajax(
+    {
+      "url": " https://flynn.boolean.careers/exercises/api/holidays",
+      "data" : {
+        "year" : 2018,
+        "month" : 0,
+      },
+      "method": "GET",
+      "success": function (data) {
+        var resp = data.response;
+        printHolidays(resp);
+      },
+      error: function (richiesta, stato, errori) {
+        alert("E' avvenuto un errore. " + errore);
+      }
+    }
+  );
+
+});
+
+
 
 
 
