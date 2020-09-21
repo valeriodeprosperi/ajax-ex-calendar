@@ -50,6 +50,24 @@ $.ajax(
 
 });
 
+function printHolidays(holidays) {
+
+
+  if(holidays.length > 0)
+
+   for (var i = 0; i < holidays.length; i++) {
+
+     var holidayDate = holidays[i].date;
+     var holidayName = holidays[i].name;
+
+     $(".day[data-date= '"+holidayDate+"']").addClass("holiday");
+     $(".day[data-date= '"+holidayDate+"'] .holdayType").text("- "+holidayName);
+
+
+
+   }
+}
+
 
 
 
